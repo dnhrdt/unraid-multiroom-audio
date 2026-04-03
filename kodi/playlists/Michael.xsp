@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="songs">
+    <name></name>
+    <match>all</match>
+    <rule field="genre" operator="contains">
+        <value>Minimal</value>
+        <value>Minimal Techno</value>
+        <value>Progressive</value>
+        <value>Progressive Psy</value>
+        <value>Dark Progressive House</value>
+        <value>Deep Progressive House</value>
+        <value>High-Tech Minimal</value>
+        <value>Modular Techno</value>
+        <value>Progressive Techno</value>
+        <value>Pure Techno</value>
+        <value>Russian Techno</value>
+        <value>Underground Techno</value>
+        <value>Chill Techno Beats</value>
+        <value>Focus Trance</value>
+        <value>Progressive Psytrance</value>
+        <value>Psychedelic Trance</value>
+    </rule>
+    <limit>250</limit>
+    <order direction="ascending">random</order>
+</smartplaylist>

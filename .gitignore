@@ -1,0 +1,51 @@
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# IDEs
+.vscode/
+.idea/
+*.code-workspace
+
+# Logs / temp
+*.log
+*.tmp
+tmp/
+
+# Claude Code (contains local permissions, SSH access patterns)
+.claude/
+
+# Fleet (internal orchestration state)
+.fleet-deck-events.jsonl
+.fleet-deck-status.json
+
+# Memory Bank (personal project context, session history)
+memory-bank/
+
+# Obsidian sync (local vault paths)
+.git-obsidian-sync.json
+tools/obsidian-sync/
+
+# Archive (old session handovers, debug notes)
+archive/
+
+# Addon user data (may contain credentials, cache)
+kodi/addon_data/
+
+# Third-party addon copies (install from official repos, not redistributed here)
+kodi/addons-reference/
+
+# Research (third-party cloned repos, not for redistribution)
+research/
+
+# Third-party documentation (copyrighted, not ours)
+docs/KodiXBMC Music Remote - Manuals and Documentation.md
+
+# Session handoff (temporary)
+.session-handoff.md
+
+# CLAUDE.md (fleet instance config, not project-relevant)
+CLAUDE.md

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="songs">
+    <name></name>
+    <match>all</match>
+    <rule field="genre" operator="contains">
+        <value>Alternative</value>
+        <value>EBM &amp; Industrial</value>
+        <value>Gothic &amp; Wave</value>
+        <value>Hardcore Punk</value>
+        <value>Independent</value>
+        <value>Mittelalter</value>
+        <value>New Wave</value>
+        <value>Psychobilly</value>
+        <value>Punk</value>
+        <value>Ska</value>
+        <value>Aggrotech</value>
+        <value>Dark Electro</value>
+        <value>Dark Post-Punk</value>
+        <value>Deutschpunk</value>
+        <value>German Hardcore</value>
+        <value>German Oi</value>
+        <value>German Prog</value>
+        <value>German Punk</value>
+        <value>Oi</value>
+        <value>Post-Punk</value>
+        <value>Tormented Radio</value>
+        <value>UK82</value>
+    </rule>
+    <limit>250</limit>
+    <order direction="ascending">random</order>
+</smartplaylist>

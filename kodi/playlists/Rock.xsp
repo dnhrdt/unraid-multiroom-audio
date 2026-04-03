@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="songs">
+    <name></name>
+    <match>all</match>
+    <rule field="genre" operator="contains">
+        <value>Classic Rock</value>
+        <value>Hard Rock</value>
+        <value>Hardrock</value>
+        <value>Metal</value>
+        <value>Psychobilly</value>
+        <value>Rock</value>
+        <value>Ska</value>
+        <value>Surf Music</value>
+        <value>Chinese Metal</value>
+        <value>Core-Mix</value>
+        <value>Crossover</value>
+        <value>Krautrock</value>
+        <value>Core-Mix</value>
+        <value>Core-Mix</value>
+    </rule>
+    <limit>250</limit>
+    <order direction="ascending">random</order>
+</smartplaylist>

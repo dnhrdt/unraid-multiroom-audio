@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.audio.audioaddict"
+       name="AudioAddict Radio"
+       version="1.0.0"
+       provider-name="kodi-unraid">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="xbmc.addon" version="21.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en_GB">Stream radio from DI.FM, JazzRadio, RadioTunes, RockRadio, ClassicalRadio, and Zen Radio</summary>
+    <summary lang="de_DE">Streame Radio von DI.FM, JazzRadio, RadioTunes, RockRadio, ClassicalRadio und Zen Radio</summary>
+    <description lang="en_GB">All-in-one AudioAddict streaming radio plugin. Browse and play channels from all six AudioAddict networks: DI.FM (electronic), JazzRadio, RadioTunes, RockRadio, ClassicalRadio, and Zen Radio. Supports free and premium streams with quality selection up to 320kbps MP3. Features: channel browsing by genre, favorites, now-playing info with album art.</description>
+    <description lang="de_DE">All-in-One AudioAddict Streaming-Radio-Plugin. Durchsuche und spiele Channels von allen sechs AudioAddict-Netzwerken: DI.FM (Electronic), JazzRadio, RadioTunes, RockRadio, ClassicalRadio und Zen Radio. Unterstützt kostenlose und Premium-Streams mit Qualitätsauswahl bis 320kbps MP3.</description>
+    <license>MIT</license>
+  </extension>
+</addon>

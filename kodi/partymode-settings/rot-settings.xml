@@ -1,0 +1,17 @@
+<settings version="2">
+    <setting id="avoid-on-pause-start-on-screensaver-partymode">false</setting>
+    <setting id="delay-startup-partymode">6</setting>
+    <setting id="delay-visualisation-partymode">6</setting>
+    <setting id="playback-random">2</setting>
+    <setting id="playback-repeat">1</setting>
+    <setting id="start-on-screensaver-partymode">true</setting>
+    <setting id="startup-favourites" default="true">false</setting>
+    <setting id="startup-favourites-path" default="true"></setting>
+    <setting id="startup-partymode">true</setting>
+    <setting id="startup-playlist">true</setting>
+    <setting id="startup-playlist-partymode">true</setting>
+    <setting id="startup-playlist-path" default="true"></setting>
+    <setting id="visualisation-partymode" default="true">false</setting>
+    <setting id="volume-level-partymode">100</setting>
+    <setting id="volume-partymode">true</setting>
+</settings>

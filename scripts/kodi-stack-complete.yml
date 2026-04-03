@@ -1,0 +1,114 @@
+services:
+  kodi-rot:
+    image: kodi-pulse:latest
+    container_name: kodi-rot
+    hostname: kodi-rot
+    init: true
+    networks:
+      eth0.2:
+        ipv4_address: 10.2.0.160
+    environment:
+      - KODI_DB_HOST=10.2.0.159
+      - KODI_DB_USER=kodi
+      - KODI_DB_PASS=c3tac3A!
+      - KODI_UID=99
+      - KODI_GID=100
+      - TZ=Europe/Berlin
+      - PULSE_SERVER=10.2.0.144:4713
+      - PULSE_SINK=kodi_rot
+    volumes:
+      - /mnt/user0/appdata/kodi-rot:/data
+      - /mnt/user0/Audio:/media/music:ro
+    restart: no
+
+  kodi-orange:
+    image: kodi-pulse:latest
+    container_name: kodi-orange
+    hostname: kodi-orange
+    init: true
+    networks:
+      eth0.2:
+        ipv4_address: 10.2.0.161
+    environment:
+      - KODI_DB_HOST=10.2.0.159
+      - KODI_DB_USER=kodi
+      - KODI_DB_PASS=c3tac3A!
+      - KODI_UID=99
+      - KODI_GID=100
+      - TZ=Europe/Berlin
+      - PULSE_SERVER=10.2.0.144:4713
+      - PULSE_SINK=kodi_orange
+    volumes:
+      - /mnt/user0/appdata/kodi-orange:/data
+      - /mnt/user0/Audio:/media/music:ro
+    restart: no
+
+  kodi-gelb:
+    image: kodi-pulse:latest
+    container_name: kodi-gelb
+    hostname: kodi-gelb
+    init: true
+    networks:
+      eth0.2:
+        ipv4_address: 10.2.0.162
+    environment:
+      - KODI_DB_HOST=10.2.0.159
+      - KODI_DB_USER=kodi
+      - KODI_DB_PASS=c3tac3A!
+      - KODI_UID=99
+      - KODI_GID=100
+      - TZ=Europe/Berlin
+      - PULSE_SERVER=10.2.0.144:4713
+      - PULSE_SINK=kodi_gelb
+    volumes:
+      - /mnt/user0/appdata/kodi-gelb:/data
+      - /mnt/user0/Audio:/media/music:ro
+    restart: no
+
+  kodi-gruen:
+    image: kodi-pulse:latest
+    container_name: kodi-gruen
+    hostname: kodi-gruen
+    init: true
+    networks:
+      eth0.2:
+        ipv4_address: 10.2.0.163
+    environment:
+      - KODI_DB_HOST=10.2.0.159
+      - KODI_DB_USER=kodi
+      - KODI_DB_PASS=c3tac3A!
+      - KODI_UID=99
+      - KODI_GID=100
+      - TZ=Europe/Berlin
+      - PULSE_SERVER=10.2.0.144:4713
+      - PULSE_SINK=kodi_gruen
+    volumes:
+      - /mnt/user0/appdata/kodi-gruen:/data
+      - /mnt/user0/Audio:/media/music:ro
+    restart: no
+
+  kodi-blau:
+    image: kodi-pulse:latest
+    container_name: kodi-blau
+    hostname: kodi-blau
+    init: true
+    networks:
+      eth0.2:
+        ipv4_address: 10.2.0.164
+    environment:
+      - KODI_DB_HOST=10.2.0.159
+      - KODI_DB_USER=kodi
+      - KODI_DB_PASS=c3tac3A!
+      - KODI_UID=99
+      - KODI_GID=100
+      - TZ=Europe/Berlin
+      - PULSE_SERVER=10.2.0.144:4713
+      - PULSE_SINK=kodi_blau
+    volumes:
+      - /mnt/user0/appdata/kodi-blau:/data
+      - /mnt/user0/Audio:/media/music:ro
+    restart: no
+
+networks:
+  eth0.2:
+    external: true

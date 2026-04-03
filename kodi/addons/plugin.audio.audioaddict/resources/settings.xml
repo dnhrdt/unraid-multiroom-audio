@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <category label="30100">
+    <setting id="listen_key" type="text" label="30101" default=""/>
+    <setting id="username" type="text" label="30102" default=""/>
+    <setting id="password" type="text" label="30103" option="hidden" default=""/>
+    <setting id="login_button" type="action" label="30104" action="RunPlugin(plugin://plugin.audio.audioaddict/?action=login)"/>
+  </category>
+  <category label="30200">
+    <setting id="quality" type="enum" label="30201" lvalues="30210|30211|30212|30213|30214" default="0"/>
+  </category>
+</settings>

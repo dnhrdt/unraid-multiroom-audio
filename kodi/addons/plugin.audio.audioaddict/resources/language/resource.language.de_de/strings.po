@@ -1,0 +1,55 @@
+# AudioAddict Radio language file - German
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+
+# Settings categories
+msgctxt "#30100"
+msgid "Account"
+msgstr "Konto"
+
+msgctxt "#30101"
+msgid "Listen Key (from di.fm/settings)"
+msgstr "Listen Key (von di.fm/settings)"
+
+msgctxt "#30102"
+msgid "Username (email)"
+msgstr "Benutzername (E-Mail)"
+
+msgctxt "#30103"
+msgid "Password"
+msgstr "Passwort"
+
+msgctxt "#30104"
+msgid "Login and save Listen Key"
+msgstr "Anmelden und Listen Key speichern"
+
+msgctxt "#30200"
+msgid "Playback"
+msgstr "Wiedergabe"
+
+msgctxt "#30201"
+msgid "Stream Quality"
+msgstr "Streamqualität"
+
+msgctxt "#30210"
+msgid "Free (64 kbps AAC+)"
+msgstr "Kostenlos (64 kbps AAC+)"
+
+msgctxt "#30211"
+msgid "Premium Low (40 kbps AAC+)"
+msgstr "Premium Niedrig (40 kbps AAC+)"
+
+msgctxt "#30212"
+msgid "Premium Medium (64 kbps AAC+)"
+msgstr "Premium Mittel (64 kbps AAC+)"
+
+msgctxt "#30213"
+msgid "Premium (128 kbps AAC+)"
+msgstr "Premium (128 kbps AAC+)"
+
+msgctxt "#30214"
+msgid "Premium High (320 kbps MP3)"
+msgstr "Premium Hoch (320 kbps MP3)"

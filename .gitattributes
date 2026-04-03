@@ -1,0 +1,5 @@
+# Enforce LF endings for shell, YAML, and docs to avoid CRLF issues on Unraid
+*.sh text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf

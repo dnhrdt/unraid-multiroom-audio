@@ -1,0 +1,26 @@
+#!/usr/bin/pulseaudio -nF
+
+# Minimal boot config: do NOT include /etc/pulse/system.pa to avoid module-udev-detect
+# Define the UMC1820 master sink and remapped sinks used by Kodi containers.
+
+## Protocol sockets first
+# Minimal boot config: do NOT include /etc/pulse/system.pa to avoid module-udev-detect
+# Protocol sockets first, then master + remap sinks
+
+# Local Unix socket for pactl and on-host clients
+load-module module-native-protocol-unix
+
+# TCP for Docker access
+load-module module-native-protocol-tcp auth-ip-acl="10.2.0.0/24;127.0.0.1" port=4713
+
+# Master ALSA sink (UMC1820)
+load-module module-alsa-sink device=hw:0,0 sink_name=umc1820_master channels=12 format=s24le rate=48000
+
+# Remapped stereo sinks for Kodi
+load-module module-remap-sink sink_name=kodi_rot master=umc1820_master channels=2 master_channel_map=front-left,front-right channel_map=front-left,front-right remix=no
+load-module module-remap-sink sink_name=kodi_orange master=umc1820_master channels=2 master_channel_map=rear-left,rear-right channel_map=front-left,front-right remix=no
+load-module module-remap-sink sink_name=kodi_gelb master=umc1820_master channels=2 master_channel_map=front-center,lfe channel_map=front-left,front-right remix=no
+load-module module-remap-sink sink_name=kodi_gruen master=umc1820_master channels=2 master_channel_map=side-left,side-right channel_map=front-left,front-right remix=no
+load-module module-remap-sink sink_name=kodi_blau master=umc1820_master channels=2 master_channel_map=aux0,aux1 channel_map=front-left,front-right remix=no
+
+### End of boot.pa

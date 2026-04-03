@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="songs">
+    <name></name>
+    <match>all</match>
+    <rule field="genre" operator="contains">
+        <value>Audiophile</value>
+        <value>Avantgarde</value>
+        <value>Blues</value>
+        <value>Country</value>
+        <value>Folk</value>
+        <value>Instrumental</value>
+        <value>Jazz</value>
+        <value>Reggae</value>
+        <value>New Age</value>
+    </rule>
+    <limit>250</limit>
+    <order direction="ascending">random</order>
+</smartplaylist>

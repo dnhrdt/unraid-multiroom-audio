@@ -94,6 +94,19 @@ Expected: all five containers healthy.
 Use this sequence after a kernel update or if Kodi playback runs through tracks
 too quickly while files are still readable.
 
+For a USB disconnect/reconnect where the UMC1820 is visible again, use the
+one-shot recovery script:
+
+```bash
+bash /boot/config/plugins/pulseaudio/recover_audio_after_usb_reconnect.sh
+```
+
+It verifies the ALSA library, waits for the UMC1820, restarts PulseAudio, then
+restarts all five Kodi containers with the existing staggered timing.
+
+If the sound driver package itself is missing or the kernel changed, repair the
+packages first:
+
 ```bash
 upgradepkg --install-new /boot/extra/alsa-lib-1.2.14-x86_64-1.txz
 installpkg /boot/extra/sound-*-$(uname -r)-1.txz
@@ -105,10 +118,8 @@ cat /proc/asound/cards
 If the UMC1820 is visible, restart PulseAudio:
 
 ```bash
-kill $(pidof pulseaudio) 2>/dev/null || true
-sleep 2
 bash /boot/config/plugins/pulseaudio/start_pulseaudio.sh
-export PULSE_SERVER=127.0.0.1:4713
+export PULSE_SERVER=unix:/run/user/0/pulse/native
 pactl list sinks short
 ```
 

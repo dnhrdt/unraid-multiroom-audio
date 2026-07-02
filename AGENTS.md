@@ -12,6 +12,17 @@ The PulseAudio/ALSA/UMC1820 stack is known fragile. It took substantial work to
 make it reliable, and kernel or package changes can break audio in non-obvious
 ways.
 
+## Unraid SSH Access
+
+Use the dedicated Unraid SSH key for Star Destroyer:
+
+```bash
+ssh -i ~/.ssh/id_rsa_unraid -o BatchMode=yes root@10.0.0.44 '<command>'
+```
+
+Do not use the Fleet/KeeAgent key for Unraid access. That key is not authorized
+on Star Destroyer and will fail even when KeeAgent is working correctly.
+
 ## Unraid Change Policy
 
 Read-only diagnostics are allowed.

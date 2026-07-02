@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="songs">
+    <name></name>
+    <match>all</match>
+    <rule field="genre" operator="contains">
+        <value>Almmusi</value>
+        <value>Alpenland</value>
+        <value>Blasmusik</value>
+        <value>Boarische Musi</value>
+        <value>Stubenmusik</value>
+        <value>Tanzlmusi</value>
+        <value>Zithermusi</value>
+    </rule>
+    <limit>250</limit>
+    <order direction="ascending">random</order>
+</smartplaylist>

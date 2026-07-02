@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="songs">
+    <name></name>
+    <match>all</match>
+    <rule field="genre" operator="contains">
+        <value>70ies</value>
+        <value>80ies</value>
+        <value>Club</value>
+        <value>Disco</value>
+        <value>Funk &amp; Soul</value>
+        <value>Hip Hop</value>
+        <value>NDW</value>
+        <value>Oldies</value>
+        <value>Party</value>
+        <value>Pop</value>
+        <value>RAP</value>
+        <value>Schlager</value>
+        <value>Top100</value>
+    </rule>
+    <limit>250</limit>
+    <order direction="ascending">random</order>
+</smartplaylist>

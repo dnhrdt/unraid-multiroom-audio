@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="songs">
+    <name></name>
+    <match>all</match>
+    <rule field="genre" operator="contains">
+        <value>Acid</value>
+        <value>Breaks</value>
+        <value>Dark Drum &amp; Bass</value>
+        <value>Dark Psy</value>
+        <value>Darkpsy</value>
+        <value>Frenchcore</value>
+        <value>Goa</value>
+        <value>Hardcore</value>
+        <value>History of Techno</value>
+        <value>Minimal</value>
+        <value>Minimal Techno</value>
+        <value>Progressive</value>
+        <value>Progressive Psy</value>
+        <value>Psychedelic Trance</value>
+        <value>Schranz</value>
+        <value>Deathstep</value>
+        <value>Hard Drum and Bass</value>
+        <value>Metalstep</value>
+        <value>Minimal Dubstep</value>
+        <value>Progressive Breaks</value>
+        <value>Hard Techno</value>
+        <value>Industrial Hardcore</value>
+        <value>Speedcore</value>
+        <value>Terrorcore</value>
+        <value>Acid Techno</value>
+        <value>Belgian Techno</value>
+        <value>Dark Minimal Techno</value>
+        <value>German Techno</value>
+        <value>Raw Techno</value>
+        <value>Pure Techno</value>
+    </rule>
+    <limit>250</limit>
+    <order direction="ascending">random</order>
+</smartplaylist>

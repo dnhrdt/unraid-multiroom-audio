@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="songs">
+    <name></name>
+    <match>all</match>
+    <rule field="genre" operator="contains">
+        <value>Ambient</value>
+        <value>Ambient Psychill</value>
+        <value>Ambient Trance</value>
+        <value>Breaks</value>
+        <value>Chillout</value>
+        <value>Downtempo</value>
+        <value>E-Trip</value>
+        <value>Electro</value>
+        <value>Electronic</value>
+        <value>Electronic Chillout</value>
+        <value>IDM</value>
+        <value>Abstract IDM</value>
+        <value>Ambient IDM</value>
+        <value>Deep IDM</value>
+        <value>IDM</value>
+        <value>Psybient</value>
+        <value>PsyChill</value>
+        <value>Space Music</value>
+    </rule>
+    <limit>250</limit>
+    <order direction="ascending">random</order>
+</smartplaylist>

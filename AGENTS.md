@@ -35,6 +35,36 @@ If a live Unraid state may differ from the repo, preserve the live state before
 deploying repo files over it. Never assume the repo is the live source of truth
 unless verified.
 
+## Backup Before Unraid Changes
+
+Before any Unraid write/change, create a recovery point appropriate to the
+change scope.
+
+For broad or uncertain changes, prefer a native Unraid boot-device backup first:
+
+- WebGUI: Main -> Boot Device -> Boot Device Backup.
+- If Unraid Connect flash backup is enabled, verify a recent flash backup
+  exists and understand that it is configuration-focused, not a full runtime
+  system snapshot.
+
+For audio-stack work, also capture a repo-local, timestamped evidence snapshot
+before changing anything. Include at minimum:
+
+- `/boot/config/plugins/pulseaudio/`
+- `/boot/config/plugins/user.scripts/scripts/pulseaudio_for_kodi/script`
+- `/boot/extra/*alsa*`
+- `/boot/extra/*sound*`
+- `ls -l` and hashes for the files above
+- `/var/log/packages/alsa-lib*`
+- `/var/log/packages/sound-*`
+- current `uname -r`, `/proc/asound/cards`, `pactl` sink/client/input state,
+  ALSA mixer state, relevant `/proc/asound/card*/pcm*/sub*/status` and
+  `hw_params`, Docker status/env for `kodi-*`, and recent audio logs
+
+The snapshot must be stored under a repo-owned topic directory, not in bare
+temporary storage. Do not rely on Unraid runtime files under `/usr`, `/etc`, or
+`/var` as persistent rollback sources unless they were explicitly captured.
+
 ## Recovery Discipline
 
 When investigating audio failures:
@@ -54,4 +84,3 @@ When investigating audio failures:
   `/boot/config/plugins/user.scripts/scripts/pulseaudio_for_kodi/script`
 - Persistent packages: `/boot/extra/`
 - Kodi appdata: `/mnt/user0/appdata/kodi-*`
-

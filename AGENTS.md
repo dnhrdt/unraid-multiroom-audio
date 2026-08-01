@@ -14,14 +14,35 @@ ways.
 
 ## Unraid SSH Access
 
-Use the dedicated Unraid SSH key for Star Destroyer:
+Star Destroyer's private SSH key exists only as an attachment in Michael's
+KeePass/KeeAgent. No private key file exists on disk. Access is not standing
+authorization: use it only after Michael explicitly grants the current
+instance/session access. Do not delegate live Unraid access to subagents unless
+Michael explicitly authorizes that delegation.
 
-```bash
-ssh -i ~/.ssh/id_rsa_unraid -o BatchMode=yes root@10.0.0.44 '<command>'
+Codex Desktop may not inherit the Fleet wrapper PATH. In every fresh PowerShell
+process, select Git-for-Windows OpenSSH and KeeAgent explicitly:
+
+```powershell
+$env:PATH = 'C:\Program Files\Git\usr\bin;' + $env:PATH
+$env:SSH_AUTH_SOCK = '/c/Save/KeeAgent.sock'
+Get-Command ssh
+ssh-add -l
+ssh -o BatchMode=yes -o ForwardAgent=no root@10.0.0.44 '<command>'
 ```
 
-Do not use the Fleet/KeeAgent key for Unraid access. That key is not authorized
-on Star Destroyer and will fail even when KeeAgent is working correctly.
+- `Get-Command ssh` must resolve to
+  `C:\Program Files\Git\usr\bin\ssh.exe`.
+- Expected Unraid key fingerprint:
+  `SHA256:R28Naod49ShXisLLLd3w49g/EQnckqMP6I+jASH7Qp4`.
+- If absent from `ssh-add -l`, ask Michael to unlock KeePass and press `Ctrl+M`.
+  Do not recreate, export, or search for a private key file.
+- KeeAgent access currently expires 1,800 seconds after loading. Closing
+  KeePass removes access immediately.
+- Do not use Windows OpenSSH, Plink, or an extra `bash -lc` wrapper. Never point
+  Windows OpenSSH at `C:\Save\KeeAgent.sock`; it corrupts the Cygwin socket.
+- Do not bypass host-key checking. Star Destroyer ED25519 host fingerprint:
+  `SHA256:smPlsHHU7+M3k2GKfXfHd1ktjCJjpQ8gC2kTmMIdnoE`.
 
 ## Unraid Change Policy
 
